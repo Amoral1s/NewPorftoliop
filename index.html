@@ -32,6 +32,13 @@
     
 </head>
 <body>
+    <div class="loaders">
+        <div class="e-loadholder">
+            <div class="m-loader">
+              <span class="e-text">Web Free</span>
+            </div>
+          </div>
+    </div>
 <div class="socials">
     <a href="https://vk.com/webfreepro" target="blank"><i class="fab fa-vk"></i></a>
     <a href="https://www.instagram.com/amoralis__/" target="blank"><i class="fab fa-instagram"></i></a>
@@ -313,7 +320,13 @@
 </div>
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
 <script src="js/libs.min.js"></script>
 <script src="js/common.js"></script>
+<script>
+    $(window).on('load',function() {
+      $('.loaders').fadeOut(2000);
+    });
+    </script>
 </body>
 </html>
