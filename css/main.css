@@ -212,6 +212,7 @@ canvas {
     font-size: 16px; }
   .popup-form input[type="submit"] {
     text-align: center;
+    border-radius: 5px;
     -webkit-box-pack: center;
     -webkit-justify-content: center;
         -ms-flex-pack: center;
