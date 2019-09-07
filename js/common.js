@@ -377,6 +377,7 @@ $(document).ready(function () {
       $('.toggle').removeClass('toggle-active'); // скрываем его
     } */
     $('.toggle').on('click', function() {
+      $('.socials').toggleClass('socials-active');
       $('.toggle').toggleClass('toggle-active');
       $('.nav-menu').toggleClass('nav-active');
     });
@@ -397,17 +398,36 @@ $(document).ready(function () {
 
 
 
-  $('.cosultation').on('click', function() {
+  $('.consultation').on('click', function() {
     $('.popup-form').addClass('popup-form-active');
     $('.overlay').addClass('overlay-active');
+    $('html').addClass('body-scroll');
   });
   $('.popup-form-close').on('click', function() {
     $('.popup-form').removeClass('popup-form-active');
     $('.overlay').removeClass('overlay-active');
+    $('html').removeClass('body-scroll');
   });
   $('.overlay').on('click', function() {
     $('.popup-form').removeClass('popup-form-active');
     $('.overlay').removeClass('overlay-active');
+    $('html').removeClass('body-scroll');
   });
+
+
+  $('.services-wrap-title').on('click', f_acc);
+ 
+   
+  function f_acc(){
+    $('.services-wrap-text').not($(this).next()).slideUp(600);
+      $(this).next().slideToggle(600);
+      $('.crest').not(this).removeClass('crest-active');
+      $('.crest', this).toggleClass('crest-active');
+      
+       
+  }
+    
+
+
 
 });
