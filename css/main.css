@@ -361,14 +361,6 @@ canvas {
       border-color: red;
       color: red; }
 
-.body-scroll {
-  overflow: hidden !important;
-  -webkit-transition: 1s;
-  -o-transition: 1s;
-  transition: 1s;
-  height: 100vh;
-  position: fixed; }
-
 .overlay {
   background-color: rgba(0, 0, 0, 0.5);
   background-image: url(../img/texture.png);
