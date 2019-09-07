@@ -365,7 +365,9 @@ canvas {
   overflow: hidden !important;
   -webkit-transition: 1s;
   -o-transition: 1s;
-  transition: 1s; }
+  transition: 1s;
+  height: 100vh;
+  position: fixed; }
 
 .overlay {
   background-color: rgba(0, 0, 0, 0.5);
@@ -1351,7 +1353,7 @@ img.earth {
       -o-transition: 1s;
       transition: 1s;
       background-color: rgba(0, 0, 0, 0.9);
-      width: 100vw;
+      width: 101vw;
       height: 100vh;
       padding-top: 80px;
       -webkit-transform: translateX(200%);
