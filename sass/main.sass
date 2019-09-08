@@ -1,0 +1,679 @@
+@import "reset"
+body 
+  margin: 0
+  background-color: #000
+canvas 
+  display: block
+  vertical-align: bottom
+.socials
+  position: fixed
+  display: flex
+  justify-content: center
+  flex-direction: column
+  align-items: center
+  right: 0
+  top: 50%
+  transform: translateY(-50%)
+  z-index: 10111
+  a
+    i
+      color: $light
+      font-size: 14px
+      margin-right: 20px
+      display: flex
+      justify-content: center
+      align-items: center
+      border: 2px solid $light
+      border-radius: 50%
+      padding: 10px
+      margin: 10px 20px 10px 0
+      box-shadow: 0 0 10px rgba($light, 1)
+      transition: 0.4s
+      &:hover
+        box-shadow: 0 0 40px red
+        transition: 0.4s
+        border-color: red
+        color: red
+.overlay
+  background-color: rgba(#000, 0.5)
+  background-image: url(../img/texture.png)
+  position: fixed
+  width: 100%
+  height: 100%
+  top: 0
+  left: 0
+  bottom: 0
+  right: 0
+  z-index: 999
+  transform: translateX(-150%)
+  transition: 1s
+  &-active
+    transform: translateX(0%)
+    transition: 1s
+.popup-form
+  position: fixed
+  background-image: url(../img/texture.png)
+  background-color: rgba(#000, 0.7)
+  box-shadow: 0 0 5px rgba($light, 0.5)
+  padding: 30px
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  top: 50%
+  left: 50%
+  transform: translate(300%, -50%)
+  z-index: 1000
+  transition: 1s
+  &-active
+    transform: translate(-50%, -50%)
+    transition: 1s
+  &-close
+    position: absolute
+    right: 10px
+    top: 5px
+    font-size: 40px
+    color: $light
+    cursor: pointer
+  small
+    max-width: 260px
+    font-size: 10px
+    text-align: center
+    a
+      color: $light
+      font-size: 12px
+  textarea
+    display: flex
+    width: 300px
+    max-width: 300px
+    max-height: 80px
+    resize: none
+    border-radius: 5px
+    background-color: transparent
+    border: 2px solid $light
+    margin-bottom: 15px
+    color: #fff
+    padding-left: 10px
+    padding-top: 10px
+  input
+    display: flex
+    width: 300px
+    height: 50px
+    border-radius: 5px
+    background-color: transparent
+    border: 2px solid $light
+    margin-bottom: 15px
+    color: #fff
+    padding-left: 20px
+    font-size: 16px
+  input[type="submit"]
+    text-align: center
+    justify-content: center
+    padding: 0
+    padding-top: 3px
+    height: 70px
+    cursor: pointer
+    font-family: $bold
+    text-transform: uppercase
+    font-size: 16px
+    color: #fff
+    background-color: transparent
+    box-shadow: 0 0 10px $light
+    &:hover
+      transform: scale(1.1)
+input::-moz-placeholder
+  color: #fff
+input::-webkit-input-placeholder
+  color: #fff
+#particles-js 
+  transition: 0.6s
+  position: absolute
+  width: 100%
+  height: 100%
+  z-index: 1
+  overflow: hidden
+#particles-js2 
+  transition: 0.6s
+  position: absolute
+  width: 100%
+  height: 80%
+  z-index: -1
+  overflow: hidden
+.title
+  width: auto
+  max-width: 400px
+  text-align: center
+  text-transform: uppercase
+  font-size: 26px
+  color: #fff
+  margin-bottom: 50px
+  font-family: $bold
+  position: relative
+  margin: auto
+  margin-bottom: 50px
+  &:hover
+    &::before
+      width: 100%
+      left: 0
+      transition: 1s
+      transform: translateX(0)
+  &::after 
+    content: ''
+    position: absolute
+    bottom: -20px
+    width: 100%
+    height: 2px
+    background-color: rgba(#fff, 0.5)
+    left: 0
+  &::before
+    content: ''
+    position: absolute
+    bottom: -22px
+    width: 20%
+    height: 6px
+    background-color: $light
+    left: 50%
+    transform: translateX(-50%)
+    transition: 5s
+.button
+  text-transform: uppercase
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 300px
+  height: 85px
+  text-align: center
+  line-height: 65px
+  margin: 10px auto
+  position: relative
+  cursor: pointer
+  z-index: 5
+  font-family: $bold
+  font-size: 22px
+  line-height: 26px
+  background-image: url(../img/texture.png)
+  &:hover
+    svg rect
+      stroke-width: 15
+      stroke-dasharray: 120, 260
+      stroke-dashoffset: 287
+svg
+  position: absolute
+  top: 0
+  left: 0
+  rect
+    stroke: $light
+    stroke-width: 5
+    transition: 0.8s
+    stroke-dasharray: 400, 0 
+.moon
+  position: absolute
+  top: 130px
+  right: 430px
+  height: 100px
+  width: 100px
+  z-index: 9
+  transition: 5s
+  &:hover
+    transform: scale(1.3)!important
+.sputnik
+  position: absolute
+  top: 300px
+  left: 20%
+  height: 60px
+  z-index: 9
+  transition: 5s
+  &:hover
+    transform: scale(1.3)!important
+.nav-menu
+  position: fixed
+  width: 100%
+  display: flex
+  justify-content: center
+  left: 50%
+  transform: translateX(-50%)
+  z-index: 999
+  ul
+    display: flex
+    align-items: center
+    justify-content: center
+    width: auto
+    border-radius: 0 0 10px 10px
+    box-shadow: 0 0 15px rgba($light, 0.4)
+    background-color: rgba(#000, 0.6)
+    li
+      display: flex
+      &:first-child
+        a
+          border-radius: 0 0 0 5px
+      &:last-child
+        a
+          border-radius: 0 0 5px 0
+      a
+        display: flex
+        padding: 20px 30px
+        color: #fff
+        font-size: 16px
+        position: relative
+        &:hover
+          &::after, &::before
+            transform: scaleX(1)
+            transition: 0.6s
+        &::before
+          position: absolute
+          content: ''
+          height: 3px
+          width: 100%
+          background-color: $light
+          bottom: 10px
+          left: 0
+          transform: scaleX(0)
+          transition: 0.6s
+        
+.toggle
+  position: fixed
+  top: 20px
+  right: 0px
+  transform: translateX(-50%)
+  height: 42px
+  width: 42px
+  cursor: pointer
+  display: none
+  z-index: 99999
+  border: 1px solid $light
+  span
+    transition: all 0.6s
+    position: absolute
+    background-color: $light
+    width: 5px
+    height: 5px
+    top: 6px
+    left: 6px
+    border-radius: 1px
+    
+    &:nth-child(2)
+      left: 17px
+    &:nth-child(3)
+      left: 28px
+    &:nth-child(4)
+      top: 17px
+    &:nth-child(5)
+      
+      top: 17px
+      left: 17px
+    &:nth-child(6)
+      top: 17px
+      left: 28px
+    &:nth-child(7)
+      top: 28px
+      left: 6px
+    &:nth-child(8)
+      top: 28px
+      left: 17px
+    &:nth-child(9)
+      top: 28px
+      left: 28px
+      
+.toggle-active
+  span
+    &:last-child
+      top: 18px
+      width: 38px
+      left: 1px
+      transform: rotate(-45deg)
+      height: 4px
+    &:first-child
+      top: 18px
+      width: 38px
+      left: 1px
+      transform: rotate(45deg)
+      height: 4px
+    &:nth-child(2)
+      left: 17px
+      top: 17px
+    &:nth-child(3)
+      left: 17px
+      top: 17px
+    &:nth-child(4)
+      top: 17px
+      left: 17px
+    &:nth-child(5)
+      top: 17px
+      left: 17px
+    &:nth-child(6)
+      top: 17px
+      left: 17px
+    &:nth-child(7)
+      top: 17px
+      left: 17px
+    &:nth-child(8)
+      top: 17px
+      left: 17px
+    
+.header
+  width: 100vw
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  position: relative
+  img
+    height: 400px
+    z-index: 5
+  &-wrap
+    margin-top: 120px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    button
+      z-index: 6
+    img
+      height: 100px
+      margin: auto
+      margin-bottom: 30px
+    h1
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      font-size: 50px
+      text-transform: uppercase
+      color: #fff
+      padding: 10px 0
+      width: auto
+      text-align: center
+      margin-bottom: 50px
+      position: relative
+      z-index: 6
+      
+      &:hover
+        &::before
+          width: 100%
+          left: 0
+          transition: 1s
+          transform: translateX(0)
+      &::after 
+        content: ''
+        position: absolute
+        bottom: -20px
+        width: 100%
+        height: 2px
+        background-color: rgba(#fff, 0.5)
+        left: 0
+      &::before
+        content: ''
+        position: absolute
+        bottom: -22px
+        width: 20%
+        height: 6px
+        background-color: $light
+        left: 50%
+        transform: translateX(-50%)
+        transition: 5s
+      span
+        font-size: 24px
+        line-height: 38px
+        text-transform: none
+        color: $light
+        position: relative
+.parallax-window 
+  width: 100%
+  background: transparent
+  transition: all 0
+img.earth
+  transition: all 5s
+  z-index: 3
+  margin-top: 50px
+  &:hover
+    transform: scale(1.3)!important
+.features
+  padding: 50px 0
+  width: 100%
+  min-height: 400px
+  background-image: url(../img/texture.png)
+  background-image: url(../img/star-bg.jpg)
+  background-size: cover
+  background-attachment: fixed
+  background-repeat: no-repeat
+  z-index: 99
+  transition: all 0s
+  &-wrap
+    width: 100%
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    padding: 0
+    &-button
+      display: flex
+      flex-basis: 100%
+      width: 100%
+      justify-content: center
+      margin: 0
+      div.button
+        color: #fff
+        margin: 0
+    &-card
+      width: 260px
+      height: 400px
+      perspective: 1000px
+      transform-style: preserve-3d
+      margin-bottom: 50px
+      &-item
+        background-color: #000
+        border-radius: 5px
+        box-shadow: 0 0 15px rgba($light, 0.4)
+        width: 100%
+        height: 100%
+        margin: 0
+        padding: 20px 20px
+        transition: all 0.2s
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        i
+          font-size: 50px
+          margin-bottom: 20px
+          color: $light
+        h2
+          font-size: 18px
+          text-align: center
+          width: 100%
+          margin: 0
+          padding: 20px 0
+          padding-top: 0px    
+        span
+          width: 100%
+          padding: 5px 0 5px 40px
+          line-height: 18px
+          position: relative
+          &:after
+            position: absolute
+            content: ''
+            top: 50%
+            transform: translateY(-50%)
+            left: 10px
+            height: 20px
+            width: 20px
+            background-image: url(../img/icons/check.svg)
+            background-repeat: no-repeat
+            background-size: cover
+        p
+          width: 100%
+          padding: 5px 0 5px 10px
+.portfolio
+  padding: 50px 0
+  &-button
+    display: flex
+    justify-content: center
+    width: 100%
+    text-align: center
+    margin-bottom: 50px
+    margin-top: 100px
+    a
+      font-size: 18px
+      color: #fff
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 100%
+      height: 100%
+.jR3DCarouselGalleryDefault, .jR3DCarouselGalleryCustom 
+  margin: 0 auto
+.jR3DCarouselGalleryCustom .captions 
+  position: relative
+  padding: 10px 0
+  bottom: 4px
+  color: #000
+  background: $light
+  display: block
+  font-size: 18px
+  font-family: $bold
+  text-align: center
+.jR3DCarouselGalleryCustom a
+	text-decoration: none
+.services
+  padding: 0 0 50px 0
+  &-wrap
+    &-text
+      padding: 20px 0
+      margin: 20px 0
+      border-radius: 5px
+      box-shadow: 0 0 5px rgba($light, 0.4)
+      display: none
+      p
+        font-size: 16px
+        line-height: 22px
+        padding: 0 180px 0 80px
+        margin: 10px 0
+      div
+        height: 55px
+        font-size: 16px
+        margin-top: 30px
+        margin-left: 80px
+    &-title
+      h3
+        font-size: 22px
+        width: 100%
+        border-radius: 5px
+        /* box-shadow: 0 0 15px rgba($light, 0.3) */
+        padding: 20px 0
+        padding-left: 80px
+        position: relative
+        cursor: pointer
+        div.crest
+          position: absolute
+          right: 20px
+          top: 50%
+          transform: translateY(-55%)
+          height: 40px
+          width: 40px
+          span
+            position: absolute
+            top: 50%
+            left: 0
+            transform: translateY(-50%)
+            height: 2px
+            width: 40px
+            background-color: $light
+            border-radius: 5px
+            box-shadow: 0 0 5px $light
+            &:last-child
+              transform: rotate(90deg)
+              transition: 0.6s
+        div.crest-active
+          span
+            &:last-child
+              transform: rotate(0deg)
+              transition: 0.6s
+        i
+          position: absolute
+          top: 50%
+          transform: translateY(-50%)
+          left: 20px
+          font-size: 30px
+          color: $light
+        &:hover
+          &::before
+            width: 100%
+            left: 0
+        &::after 
+          content: ''
+          position: absolute
+          bottom: 0px
+          width: 100%
+          height: 2px
+          background-color: rgba(#fff, 0.5)
+          left: 0
+        &::before
+          content: ''
+          position: absolute
+          bottom: 0px
+          width: 15%
+          height: 3px
+          background-color: $light
+          left: 80px
+          transform: translateX(0%)
+          transition: 1s
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@import "media"
