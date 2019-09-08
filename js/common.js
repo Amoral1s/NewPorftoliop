@@ -440,11 +440,12 @@ $(document).ready(function () {
   }
   }
 $('.title').on('mousemove', function() {
-  $(this).addClass('title-hove');
-})
+  $(this).addClass('title-hover');
+});
+
 $('.title').on('mouseleave', function() {
-  $(this).removeClass('title-hove');
-})
+  $(this).removeClass('title-hover');
+});
   
   
     
