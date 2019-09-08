@@ -761,18 +761,18 @@ svg {
       left: 28px; }
 
 .toggle-active span:last-child {
-  top: 18px;
+  top: 17.5px;
   width: 38px;
-  left: 1px;
+  left: 0.5px;
   -webkit-transform: rotate(-45deg);
       -ms-transform: rotate(-45deg);
           transform: rotate(-45deg);
   height: 4px; }
 
 .toggle-active span:first-child {
-  top: 18px;
+  top: 17.5px;
   width: 38px;
-  left: 1px;
+  left: 0.5px;
   -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
           transform: rotate(45deg);
