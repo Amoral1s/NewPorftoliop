@@ -724,7 +724,7 @@ svg {
   width: 41px;
   cursor: pointer;
   display: none;
-  z-index: 99999;
+  z-index: 999999;
   border: 1px solid #00d5e8; }
   .toggle span {
     -webkit-transition: all 0.6s;
@@ -1299,30 +1299,39 @@ img.earth {
     width: 100vw;
     max-width: 1000px; }
   .socials {
-    display: none;
-    top: auto;
-    left: 50%;
-    bottom: 0;
-    -webkit-transform: translateX(-50%) translateY(0);
-        -ms-transform: translateX(-50%) translateY(0);
-            transform: translateX(-50%) translateY(0);
+    top: 17px;
+    left: 0;
+    width: 250px;
+    -webkit-transform: translateX(-200%) translateY(0);
+        -ms-transform: translateX(-200%) translateY(0);
+            transform: translateX(-200%) translateY(0);
+    -webkit-transition: 2s;
+    -o-transition: 2s;
+    transition: 2s;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -webkit-flex-direction: row;
         -ms-flex-direction: row;
             flex-direction: row;
-    max-height: 50px; }
+    max-height: 50px;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    padding-left: 10px; }
     .socials a {
       margin: 0 10px; }
       .socials a i {
-        margin-right: 0;
-        margin-bottom: 100px; }
+        margin-right: 0; }
     .socials-active {
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
-      z-index: 999999; }
+      z-index: 9999;
+      -webkit-transform: translateX(0%) translateY(0);
+          -ms-transform: translateX(0%) translateY(0);
+              transform: translateX(0%) translateY(0); }
   .features-wrap {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
