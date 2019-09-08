@@ -423,18 +423,32 @@ $(document).ready(function () {
 
   
   $('.services-wrap-title').on('click', f_acc);
- 
-   
   function f_acc(){
-    $('.services-wrap-text').not($(this).next()).slideUp(600);
-      $(this).next().slideToggle(600);
+    if ($(this).hasClass('title-active')) {
+      $(this).next().slideUp(600);
       $('.crest').not(this).removeClass('crest-active');
-      $('.crest', this).toggleClass('crest-active');
-      
-       
+      $('.crest', this).removeClass('crest-active');
+      $(this).removeClass('title-active');
+    } 
+     else {
+    $('.services-wrap-text').not($(this).next()).slideUp(600);
+    $(this).next().slideDown(600);
+    $('.crest').not(this).removeClass('crest-active');
+    $('.crest', this).toggleClass('crest-active');
+    $(this).addClass('title-active');
+    $('.services-wrap-title').not(this).removeClass('title-active');
   }
-    
+  }
 
+  
+  
+    
+$('.slider-item').on('click', function() {
+
+  $(this).children('.slider-item-text').toggleClass('slider-item-text-active');
+
+
+});
 
 
 });
