@@ -397,17 +397,13 @@ $(document).ready(function () {
     });
   }
  
-  var currentScroll=0;
-  function lockscroll(){
-      $(window).scrollTop(currentScroll);
-  }
+  
 
   $('.consultation').on('click', function() {
-    var lol = 5;
+
     $('.popup-form').addClass('popup-form-active');
     $('.overlay').addClass('overlay-active');
-    currentScroll=$(window).scrollTop();
-    $(window).bind('scroll',lockscroll);
+    
 
  
     
@@ -416,15 +412,13 @@ $(document).ready(function () {
   $('.popup-form-close').on('click', function() {
     $('.popup-form').removeClass('popup-form-active');
     $('.overlay').removeClass('overlay-active');
-    currentScroll=$(window).scrollTop();
-    $(window).unbind('scroll');
+    
     
   });
   $('.overlay').on('click', function() {
     $('.popup-form').removeClass('popup-form-active');
     $('.overlay').removeClass('overlay-active');
-    currentScroll=$(window).scrollTop();
-    $(window).unbind('scroll');
+    
   });
 
   
