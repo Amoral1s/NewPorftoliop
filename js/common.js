@@ -442,7 +442,7 @@ $(document).ready(function () {
 $('.title').on('mousemove', function() {
   $(this).addClass('title-hover');
 });
-$('.title').on('touchstart'), function() {
+$('.title').on('touchstart', function() {
   $(this).addClass('title-hover');
 });
 $('.title').on('mouseleave', function() {

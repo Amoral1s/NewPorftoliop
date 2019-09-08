@@ -532,7 +532,7 @@ input::-webkit-input-placeholder {
   position: relative;
   margin: auto;
   margin-bottom: 50px; }
-  .title:hover::before {
+  .title-hover::before {
     width: 100%;
     left: 0;
     -webkit-transition: 1s;
