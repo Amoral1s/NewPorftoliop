@@ -439,15 +439,7 @@ $(document).ready(function () {
     $('.services-wrap-title').not(this).removeClass('title-active');
   }
   }
-$('.title').on('mousemove', function() {
-  $(this).addClass('title-hover');
-});
-$('.title').on('touchstart', function() {
-  $(this).addClass('title-hover');
-});
-$('.title').on('mouseleave', function() {
-  $(this).removeClass('title-hover');
-});
+
   
   
     
