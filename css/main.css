@@ -720,8 +720,8 @@ svg {
   -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);
-  height: 42px;
-  width: 42px;
+  height: 41px;
+  width: 41px;
   cursor: pointer;
   display: none;
   z-index: 99999;
