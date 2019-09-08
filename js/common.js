@@ -439,7 +439,12 @@ $(document).ready(function () {
     $('.services-wrap-title').not(this).removeClass('title-active');
   }
   }
-
+$('.title').on('mousemove', function() {
+  $(this).addClass('title-hove');
+})
+$('.title').on('mouseleave', function() {
+  $(this).removeClass('title-hove');
+})
   
   
     
